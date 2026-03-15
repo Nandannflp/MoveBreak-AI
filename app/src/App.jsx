@@ -1,8 +1,12 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Shield, Timer, Activity, Bell, Smartphone, ChevronRight } from 'lucide-react'
+import Dashboard from './pages/Dashboard'
+import './index.css'
 
-function App() {
+function Landing() {
+  const navigate = useNavigate();
   return (
     <div className="app">
       {/* Header */}
@@ -11,7 +15,7 @@ function App() {
           <div style={{ width: 32, height: 32, background: 'var(--primary)', borderRadius: 8 }}></div>
           <span style={{ fontSize: 20, fontWeight: 800, color: 'var(--primary)' }}>MoveBreak AI</span>
         </div>
-        <button className="btn-primary">Download App</button>
+        <button className="btn-primary" onClick={() => navigate('/dashboard')}>Launch Dashboard</button>
       </nav>
 
       {/* Hero Section */}
@@ -33,7 +37,7 @@ function App() {
         </motion.p>
         
         <div style={{ display: 'flex', justifyContent: 'center', gap: '16px' }}>
-          <button className="btn-primary" style={{ padding: '16px 32px', fontSize: 18 }}>
+          <button className="btn-primary" style={{ padding: '16px 32px', fontSize: 18 }} onClick={() => navigate('/dashboard')}>
             Get Started Free <ChevronRight size={20} />
           </button>
         </div>
@@ -67,6 +71,17 @@ function App() {
         </p>
       </footer>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   )
 }
 
