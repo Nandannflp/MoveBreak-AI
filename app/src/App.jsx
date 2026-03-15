@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import { motion } from 'framer-motion'
 import { Shield, Timer, Activity, Bell, Smartphone, ChevronRight } from 'lucide-react'
 import Dashboard from './pages/Dashboard'
+import Posture from './pages/Posture'
+import Focus from './pages/Focus'
 import './index.css'
 
 function Landing() {
@@ -80,6 +82,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/posture" element={<Posture />} />
+        <Route path="/focus" element={<Focus />} />
       </Routes>
     </Router>
   )
