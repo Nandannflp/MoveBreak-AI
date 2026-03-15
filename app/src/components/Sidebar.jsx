@@ -9,6 +9,8 @@ const Sidebar = () => {
         { path: '/dashboard', label: 'Overview', icon: <Activity size={20} /> },
         { path: '/posture', label: 'Posture', icon: <Shield size={20} /> },
         { path: '/focus', label: 'Focus', icon: <Timer size={20} /> },
+        { path: '/analytics', label: 'Analytics', icon: <Activity size={20} /> },
+        { path: '/achievements', label: 'Awards', icon: <Shield size={20} /> },
         { path: '/profile', label: 'Profile', icon: <User size={20} /> },
         { path: '/settings', label: 'Settings', icon: <Settings size={20} /> },
     ]

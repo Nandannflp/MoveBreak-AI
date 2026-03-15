@@ -5,6 +5,9 @@ import { Shield, Timer, Activity, Bell, Smartphone, ChevronRight } from 'lucide-
 import Dashboard from './pages/Dashboard'
 import Posture from './pages/Posture'
 import Focus from './pages/Focus'
+import Analytics from './pages/Analytics'
+import Achievements from './pages/Achievements'
+import Onboarding from './pages/Onboarding'
 import './index.css'
 
 function Landing() {
@@ -17,7 +20,7 @@ function Landing() {
           <div style={{ width: 32, height: 32, background: 'var(--primary)', borderRadius: 8 }}></div>
           <span style={{ fontSize: 20, fontWeight: 800, color: 'var(--primary)' }}>MoveBreak AI</span>
         </div>
-        <button className="btn-primary" onClick={() => navigate('/dashboard')}>Launch Dashboard</button>
+        <button className="btn-primary" onClick={() => navigate('/onboarding')}>Launch Dashboard</button>
       </nav>
 
       {/* Hero Section */}
@@ -39,7 +42,7 @@ function Landing() {
         </motion.p>
         
         <div style={{ display: 'flex', justifyContent: 'center', gap: '16px' }}>
-          <button className="btn-primary" style={{ padding: '16px 32px', fontSize: 18 }} onClick={() => navigate('/dashboard')}>
+          <button className="btn-primary" style={{ padding: '16px 32px', fontSize: 18 }} onClick={() => navigate('/onboarding')}>
             Get Started Free <ChevronRight size={20} />
           </button>
         </div>
@@ -81,9 +84,12 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/posture" element={<Posture />} />
         <Route path="/focus" element={<Focus />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/achievements" element={<Achievements />} />
       </Routes>
     </Router>
   )
