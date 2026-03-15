@@ -58,7 +58,7 @@ const Dashboard = () => {
                         <div style={{ maxWidth: '300px' }}>
                             <h2 style={{ fontSize: 24, fontWeight: 800, marginBottom: 16 }}>Looking Good!</h2>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: 24 }}>Your overall health score is trending upwards this week. Keep maintaining that posture!</p>
-                            <button className="btn-primary">View Detailed Insights</button>
+                            <button className="btn-primary" onClick={() => window.location.href='/break'}>Start Active Break</button>
                         </div>
                     </div>
 
@@ -71,7 +71,10 @@ const Dashboard = () => {
                         <p style={{ fontSize: 16, lineHeight: 1.6, opacity: 0.9, marginBottom: 24 }}>
                             "You've been sitting for 45 minutes straight. Based on your stress levels, now would be a perfect time for a 5-minute eye-relief exercise."
                         </p>
-                        <button style={{ width: '100%', padding: '12px', borderRadius: '12px', border: 'none', background: 'rgba(255,255,255,0.2)', color: 'white', fontWeight: 700, cursor: 'pointer' }}>
+                        <button 
+                            onClick={() => window.location.href='/break'}
+                            style={{ width: '100%', padding: '12px', borderRadius: '12px', border: 'none', background: 'rgba(255,255,255,0.2)', color: 'white', fontWeight: 700, cursor: 'pointer' }}
+                        >
                             Start Exercise
                         </button>
                     </div>

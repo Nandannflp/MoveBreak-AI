@@ -8,6 +8,7 @@ import Focus from './pages/Focus'
 import Analytics from './pages/Analytics'
 import Achievements from './pages/Achievements'
 import Onboarding from './pages/Onboarding'
+import BreakMode from './pages/BreakMode'
 import './index.css'
 
 function Landing() {
@@ -90,6 +91,7 @@ function App() {
         <Route path="/focus" element={<Focus />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/achievements" element={<Achievements />} />
+        <Route path="/break" element={<BreakMode />} />
       </Routes>
     </Router>
   )
